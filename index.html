@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdventureForge - Craft Your Journey | Trip Planning Software for Guides & Adventure Groups</title>
+  <meta name="description" content="Craft Your Journey with AdventureForge. Professional trip planning software for outdoor guides, tour operators, and adventure groups. Manage itineraries, gear, meals, costs, and client communication in one platform.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-white to-gray-50">
+
+  <!-- Hero Section -->
+  <div class="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-emerald-600">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div class="text-center">
+        <!-- Logo -->
+        <div class="flex justify-center mb-8">
+          <img src="adventure_forge_logo.png" alt="AdventureForge" class="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl">
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+          Trip Planning Software for Guides & Adventure Groups
+        </h1>
+        <p class="text-2xl md:text-3xl font-semibold text-emerald-100 mb-6 drop-shadow-lg">
+          Craft Your Journey
+        </p>
+        <p class="text-xl md:text-2xl text-blue-50 mb-8 max-w-3xl mx-auto">
+          Professional platform for outdoor guides, tour operators, and groups who explore.
+          <br>
+          Manage itineraries, gear, meals, costs, and client communication in one place.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="/login" class="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-blue-50 transition-all transform hover:scale-105">
+            Request Access
+          </a>
+          <a href="/login" class="px-8 py-4 bg-blue-500/20 text-white font-semibold rounded-lg backdrop-blur-sm border-2 border-white/30 hover:bg-blue-500/30 transition-all">
+            Sign In
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Wave -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 120" class="w-full h-12 md:h-20" preserveAspectRatio="none">
+        <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="rgb(249, 250, 251)"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Problem Statement -->
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Professional trip planning for guides and adventure groups
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Whether you're running a guiding business or organizing group adventures, stop juggling
+        spreadsheets, email threads, and group chats. AdventureForge brings all your trip planning,
+        client communication, and logistics into one professional platform.
+      </p>
+    </div>
+
+    <!-- Feature Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Day-by-Day Itinerary</h3>
+        <p class="text-gray-600 text-sm">Plan your route with detailed daily breakdowns, waypoints, and timing estimates.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Attendee Management</h3>
+        <p class="text-gray-600 text-sm">Track RSVPs, invite participants, and designate emergency contacts with clear status indicators.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Meal Planning</h3>
+        <p class="text-gray-600 text-sm">Organize meals for the entire trip, assign responsibilities, and generate shopping lists with ingredient aggregation.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Transport Coordination</h3>
+        <p class="text-gray-600 text-sm">Arrange carpools, track who's driving, and ensure everyone gets to the trailhead.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Gear & Packing Lists</h3>
+        <p class="text-gray-600 text-sm">Create shared group gear lists and personal packing checklists. Use templates for common trips.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Cost Splitting</h3>
+        <p class="text-gray-600 text-sm">Track expenses, split costs fairly, and see who owes what with automatic settlement calculations.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Route Mapping</h3>
+        <p class="text-gray-600 text-sm">Upload GPX files, visualize your route on interactive maps, and share coordinates with the group.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Group Discussion</h3>
+        <p class="text-gray-600 text-sm">Keep all trip communication in one place with real-time messaging and file sharing.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-blue-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Task Management</h3>
+        <p class="text-gray-600 text-sm">Assign pre-trip tasks, track progress, and ensure nothing gets forgotten before departure.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Use Cases -->
+  <div class="bg-white py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">
+        Built for professional guides and adventure groups
+      </h2>
+      <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+        From commercial guiding operations to recreational groups, AdventureForge scales with your needs
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-blue-100 to-emerald-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-emerald-600 rounded-full"></div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Mountain Guides & Outfitters</h3>
+          <p class="text-gray-600 text-sm">Professional trip planning for guided hiking, climbing, and mountaineering expeditions. Share detailed itineraries and gear lists with clients.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-blue-100 to-emerald-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-emerald-600 rounded-full"></div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Backcountry Tour Operators</h3>
+          <p class="text-gray-600 text-sm">Manage multi-day ski tours, canoe trips, and wilderness expeditions. Coordinate logistics, meals, and costs across multiple departures.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-blue-100 to-emerald-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-emerald-600 rounded-full"></div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Adventure Travel Companies</h3>
+          <p class="text-gray-600 text-sm">Organize group adventure tours with comprehensive itineraries, transport coordination, and real-time client communication.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-blue-100 to-emerald-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-emerald-600 rounded-full"></div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Outdoor Education Programs</h3>
+          <p class="text-gray-600 text-sm">Plan field courses and student expeditions with detailed packing lists, meal plans, and emergency contact management.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-blue-100 to-emerald-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-emerald-600 rounded-full"></div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Recreational Outdoor Clubs</h3>
+          <p class="text-gray-600 text-sm">Coordinate club trips with varying participants. Share routes, split costs, and manage RSVPs for weekend adventures.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-blue-100 to-emerald-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-emerald-600 rounded-full"></div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Friend & Family Adventures</h3>
+          <p class="text-gray-600 text-sm">Plan multi-day backpacking trips, climbing expeditions, and group camping with shared gear and meal planning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Commercial Benefits -->
+  <div class="bg-gradient-to-br from-emerald-50 to-blue-50 py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+        Professional features for guiding operations
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Client Communication Hub
+          </h3>
+          <p class="text-gray-600">
+            Share trip details, itineraries, and gear lists with clients through a simple link.
+            Keep all pre-trip communication organized in one place. Clients access everything without
+            downloading apps or creating accounts.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Reusable Trip Templates
+          </h3>
+          <p class="text-gray-600">
+            Create packing list templates and meal plans for your most common trips. Copy and customize
+            for each departure, saving hours of repetitive planning work.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Emergency Contact Management
+          </h3>
+          <p class="text-gray-600">
+            Designate emergency contacts with read-only access to full trip details, including itineraries,
+            participant information, and real-time location data.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Transparent Cost Tracking
+          </h3>
+          <p class="text-gray-600">
+            Track trip expenses, split costs among participants, and generate clear settlement reports.
+            Perfect for shared-cost expeditions and group bookings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <div class="bg-gradient-to-br from-blue-600 to-emerald-600 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Ready to streamline your guiding operations or group adventures?
+      </h2>
+      <p class="text-2xl font-semibold text-emerald-100 mb-6">
+        Craft Your Journey
+      </p>
+      <p class="text-xl text-blue-50 mb-8">
+        Join guides, outfitters, and adventure groups using AdventureForge to plan better trips.
+      </p>
+      <a href="/login" class="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-blue-50 transition-all transform hover:scale-105">
+        Request Access
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h4 class="text-white font-semibold mb-4">AdventureForge</h4>
+          <p class="text-sm mb-4">
+            Professional trip planning software for outdoor guides, tour operators, and adventure groups.
+            Plan itineraries, manage gear, coordinate logistics, and communicate with clients.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-4">Perfect For</h4>
+          <ul class="text-sm space-y-2">
+            <li>Mountain Guides & Outfitters</li>
+            <li>Backcountry Tour Operators</li>
+            <li>Adventure Travel Companies</li>
+            <li>Outdoor Education Programs</li>
+            <li>Climbing & Hiking Groups</li>
+            <li>Expedition Planning</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-4">Features</h4>
+          <ul class="text-sm space-y-2">
+            <li>Trip Itinerary Planning</li>
+            <li>Gear & Packing Lists</li>
+            <li>Meal Planning & Shopping Lists</li>
+            <li>Cost Splitting & Tracking</li>
+            <li>Route Mapping (GPX)</li>
+            <li>Client Communication</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <p class="text-sm">
+            © 2026 AdventureForge. Craft Your Journey. Professional trip planning for guides and groups who explore.
+          </p>
+        </div>
+        <div class="flex gap-6">
+          <a href="/dashboard" class="text-sm hover:text-white transition-colors">Dashboard</a>
+          <a href="/login" class="text-sm hover:text-white transition-colors">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
