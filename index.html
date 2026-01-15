@@ -36,9 +36,9 @@
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="/login" class="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-blue-50 transition-all transform hover:scale-105">
+          <button onclick="openRequestModal()" class="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-blue-50 transition-all transform hover:scale-105 cursor-pointer">
             Request Access
-          </a>
+          </button>
           <a href="/login" class="px-8 py-4 bg-blue-500/20 text-white font-semibold rounded-lg backdrop-blur-sm border-2 border-white/30 hover:bg-blue-500/30 transition-all">
             Sign In
           </a>
@@ -264,9 +264,9 @@
       <p class="text-xl text-blue-50 mb-8">
         Join guides, outfitters, and adventure groups using AdventureForge to plan better trips.
       </p>
-      <a href="/login" class="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-blue-50 transition-all transform hover:scale-105">
+      <button onclick="openRequestModal()" class="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-blue-50 transition-all transform hover:scale-105 cursor-pointer">
         Request Access
-      </a>
+      </button>
     </div>
   </div>
 
@@ -320,6 +320,180 @@
       </div>
     </div>
   </footer>
+
+  <!-- Request Access Modal -->
+  <div id="requestModal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 md:p-8 relative">
+      <!-- Close Button -->
+      <button onclick="closeRequestModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Modal Content -->
+      <div id="formContent">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Request Access</h2>
+        <p class="text-gray-600 mb-6">Tell us about your guiding operation or adventure group</p>
+
+        <form id="requestForm" onsubmit="handleSubmit(event)" class="space-y-4">
+          <!-- Name Field -->
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+              placeholder="Your name"
+            >
+          </div>
+
+          <!-- Email Field -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+              placeholder="you@example.com"
+            >
+          </div>
+
+          <!-- Notes Field -->
+          <div>
+            <label for="notes" class="block text-sm font-medium text-gray-700 mb-1">Tell us about your needs</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="4"
+              maxlength="1000"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
+              placeholder="Are you a guide, outfitter, or group organizer? What features are you most interested in?"
+            ></textarea>
+            <p class="text-xs text-gray-500 mt-1">Optional (max 1000 characters)</p>
+          </div>
+
+          <!-- Error Message -->
+          <div id="errorMessage" class="hidden bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm"></div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            id="submitButton"
+            class="w-full bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg"
+          >
+            Submit Request
+          </button>
+        </form>
+      </div>
+
+      <!-- Success Message (hidden by default) -->
+      <div id="successContent" class="hidden text-center">
+        <div class="mb-4">
+          <svg class="w-16 h-16 text-green-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Request Submitted!</h2>
+        <p class="text-gray-600 mb-6">Thank you for your interest. We'll be in touch soon.</p>
+        <button
+          onclick="closeRequestModal()"
+          class="bg-gradient-to-r from-blue-600 to-emerald-600 text-white font-semibold py-2 px-6 rounded-lg hover:from-blue-700 hover:to-emerald-700 transition-all"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Modal functions
+    function openRequestModal() {
+      document.getElementById('requestModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeRequestModal() {
+      document.getElementById('requestModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+      // Reset form and show form content
+      document.getElementById('requestForm').reset();
+      document.getElementById('formContent').classList.remove('hidden');
+      document.getElementById('successContent').classList.add('hidden');
+      document.getElementById('errorMessage').classList.add('hidden');
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('requestModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeRequestModal();
+      }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !document.getElementById('requestModal').classList.contains('hidden')) {
+        closeRequestModal();
+      }
+    });
+
+    // Form submission
+    async function handleSubmit(event) {
+      event.preventDefault();
+
+      const submitButton = document.getElementById('submitButton');
+      const errorMessage = document.getElementById('errorMessage');
+
+      // Disable button and show loading
+      submitButton.disabled = true;
+      submitButton.textContent = 'Submitting...';
+      errorMessage.classList.add('hidden');
+
+      try {
+        const formData = new FormData(event.target);
+        const data = {
+          name: formData.get('name'),
+          email: formData.get('email'),
+          notes: formData.get('notes') || '',
+        };
+
+        // Use relative URL for same-origin, or configure for production
+        const apiUrl = window.location.hostname === 'localhost'
+          ? '/api/request-access'
+          : 'https://adventureforge.io/api/request-access';
+
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(result.error || 'Failed to submit request');
+        }
+
+        // Show success message
+        document.getElementById('formContent').classList.add('hidden');
+        document.getElementById('successContent').classList.remove('hidden');
+      } catch (error) {
+        // Show error message
+        errorMessage.textContent = error.message;
+        errorMessage.classList.remove('hidden');
+
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit Request';
+      }
+    }
+  </script>
 
 </body>
 </html>
